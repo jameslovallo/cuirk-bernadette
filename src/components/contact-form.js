@@ -1,5 +1,5 @@
 import { html, scss } from 'cuirk'
-import { grid } from './grid.js'
+import { button, grid, icon } from './index.js'
 
 export const contactForm = () => html`
 	<form method="POST" netlify netlify-honeypot="bot-field">
@@ -8,18 +8,22 @@ export const contactForm = () => html`
 				Don’t fill this out if you’re human: <input name="bot-field" />
 			</label>
 		</p>
-		${grid(
-			html`
-				<label>
-					<span>Name<sup></sup></span>
-					<input type="text" name="name" required />
-				</label>
-				<label>
-					<span>Phone Number<sup></sup></span>
-					<input type="tel" name="phone" required />
-				</label>
-			`
-		)}
+		${grid({
+			children: [
+				html`
+					<label>
+						<span>Name<sup></sup></span>
+						<input type="text" name="name" required />
+					</label>
+				`,
+				html`
+					<label>
+						<span>Phone Number<sup></sup></span>
+						<input type="tel" name="phone" required />
+					</label>
+				`,
+			],
+		})}
 		<label>
 			<span>Email Address<sup></sup></span>
 			<input type="email" name="email" required />
@@ -28,7 +32,11 @@ export const contactForm = () => html`
 			<span>Your Message<sup></sup></span>
 			<textarea name="message" required></textarea>
 		</label>
-		<button type="submit">Send</button>
+		${button({
+			children: icon({ name: 'Send' }) + 'Submit',
+			type: 'submit',
+			shape: 'rounded',
+		})}
 	</form>
 `
 
@@ -55,12 +63,13 @@ contactForm.style = scss`
 			input,
 			textarea {
 				border: none;
-				border-bottom: 2px solid transparent;
+				border-bottom: var(--c-border);
+				border-bottom-width: 2px;
 				font-size: 1rem;
 				padding: 0.5rem;
 
 				&:focus {
-					border-bottom: 2px solid var(--c-primary);
+					border-bottom-color: var(--c-primary);
 					outline: none;
 				}
 			}

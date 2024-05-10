@@ -31,13 +31,7 @@ export default [
 		mobile: 'end',
 	},
 	{
-		title: 'Press',
-		href: '/press',
-		desktop: 'end',
-		mobile: 'end',
-	},
-	{
-		title: 'Contact Us',
+		title: 'Contact',
 		href: '/contact',
 		desktop: 'end',
 		mobile: 'end',
