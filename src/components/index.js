@@ -12,5 +12,6 @@ export {
 export { contactForm } from './contact-form.js'
 export { footer } from './footer.js'
 export { grid } from './grid.js'
+export { homeHeader } from './home-header.js'
 export { pageMeta } from './page-meta.js'
 export { pressList } from './press-list.js'

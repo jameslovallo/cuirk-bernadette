@@ -1,23 +1,9 @@
-import { loop, md } from 'cuirk'
-import { button, icon } from '../src/components/index.js'
+import { md } from 'cuirk'
+import { homeHeader } from '../src/components/index.js'
 import meta from '../src/data/meta.js'
-import social from '../src/data/social.js'
 
 export const body = md`
-# ${meta.title}
-
-${meta.description}
-
-${loop(
-	social,
-	(link) =>
-		`${button({
-			children: icon({ name: link.icon }) + link.title,
-			href: link.href,
-			variant: 'subtle',
-			shape: 'rounded',
-		})}` + '&nbsp;'
-)}
+${homeHeader({ meta })}
 
 ## About Professor Atuahene
 
