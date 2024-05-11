@@ -30,7 +30,6 @@ Since the Coalition’s inception, we’ve accomplished an impressive amount. Fr
 ${button({
 	children: 'Learn More',
 	href: 'https://illegalforeclosures.org',
-	variant: 'subtle',
 	shape: 'rounded',
 })}
 ${button({

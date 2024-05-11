@@ -15,7 +15,6 @@ export const homeHeader = ({ meta }) =>
 						`${button({
 							children: icon({ name: link.icon }) + link.title,
 							href: link.href,
-							variant: 'subtle',
 							shape: 'rounded',
 						})}` + '&nbsp;'
 				)}

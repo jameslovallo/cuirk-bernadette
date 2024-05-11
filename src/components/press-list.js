@@ -32,7 +32,10 @@ pressList.style = scss`
 
 		> li {
 			display: grid;
-			margin-bottom: 1rem;
+
+			&:not(:last-of-type) {
+				margin-bottom: 1rem;
+			}
 
 			&.with-img {
 				align-items: center;

@@ -1,11 +1,5 @@
-import { html, loop, md } from 'cuirk'
-import {
-	button,
-	card,
-	cardActions,
-	grid,
-	icon,
-} from '../src/components/index.js'
+import { loop, md } from 'cuirk'
+import { grid, imageCard } from '../src/components/index.js'
 import cards from '../src/data/south-africa/cards.js'
 
 export const meta = {
@@ -24,27 +18,6 @@ ${
 ## Learn More
 
 ${grid({
-	children: [
-		loop(cards, ({ img, title, href }) =>
-			card([
-				html`<img src="${img}" />`,
-				cardActions([
-					button({
-						children: title + icon({ name: 'ArrowRight' }),
-						href,
-						variant: 'ghost',
-						shape: 'rounded',
-					}),
-				]),
-			])
-		),
-	],
+	children: [loop(cards, imageCard)],
 })}
-
-<style>
-	.card > .actions > .button {
-		justify-content: space-between;
-		width: 100%;
-	}
-</style>
 `

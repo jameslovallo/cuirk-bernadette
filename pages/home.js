@@ -1,6 +1,21 @@
-import { md } from 'cuirk'
-import { homeHeader } from '../src/components/index.js'
+import { loop, md } from 'cuirk'
+import {
+	grid,
+	homeHeader,
+	imageCard,
+	youtube,
+} from '../src/components/index.js'
 import meta from '../src/data/meta.js'
+import nav from '../src/data/nav.js'
+
+const videoGallery = [
+	{ id: 'QOaBmU_3PdI' },
+	{ id: 'FF69IlomFVQ' },
+	{ id: 'RYamNC4gTrQ' },
+	{ id: 'tuIjsQFX_-o' },
+	{ id: 'HgelDL8rNDU' },
+	{ id: 'EgngNbF4k-E' },
+]
 
 export const body = md`
 ${homeHeader({ meta })}
@@ -16,4 +31,17 @@ Prof. Atuahene won a National Science Foundation award for her current project a
 ## The Work
 
 Bernadette Atuahene is a property law scholar whose work focuses on land stolen from people in the African Diaspora. Her last two projects dealt with land taken by state entities in South Africa and Detroit.
+
+${grid({
+	children: [
+		loop(
+			nav.filter((link) => link.img),
+			imageCard
+		),
+	],
+})}
+
+## Video Gallery
+
+${grid({ children: [loop(videoGallery, youtube)] })}
 `

@@ -12,6 +12,6 @@ export default [
 	{
 		img: '/src/images/south-africa/symposia.webp',
 		title: 'Read the Symposia',
-		href: '/south-africa/symposia',
+		href: '/south-africa/we-want-whats-ours/symposia',
 	},
 ]
