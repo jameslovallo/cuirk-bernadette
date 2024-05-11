@@ -11,10 +11,10 @@ export const homeHeader = ({ meta }) =>
 				<p>${meta.description}</p>
 				${loop(
 					social,
-					(link) =>
+					({ icon: name, href, title }) =>
 						`${button({
-							children: icon({ name: link.icon }) + link.title,
-							href: link.href,
+							children: icon({ name }) + title,
+							href,
 							shape: 'rounded',
 						})}` + '&nbsp;'
 				)}

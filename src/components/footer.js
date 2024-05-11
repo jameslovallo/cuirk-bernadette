@@ -9,7 +9,7 @@ export const footer = () => html`
 		<div>
 			${loop(
 				nav.filter((l) => l.desktop === 'end'),
-				(link) => html`<a href="${link.href}">${link.title}</a>`
+				({ href, title }) => html`<a href="${href}">${title}</a>`
 			)}
 		</div>
 		<small>© ${date} ${meta.title}. All Rights Reserved.</small>
