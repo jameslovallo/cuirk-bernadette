@@ -35,46 +35,58 @@ Creating a New Theoretical Framework for Understanding Involuntary Property Loss
 
 <img src="/src/images/south-africa/symposia/lsi.webp" alt="Law & Social Inquiry - Journal of the American Bar Foundation" width="250" style="margin-bottom: 2rem" />
 
-${card([
-	pressList(symposia1),
-	cardActions([
-		button({
-			children: 'Go to Publication' + icon({ name: 'ArrowRight' }),
-			href: 'https://onlinelibrary.wiley.com/toc/17474469/2016/41/4',
-			shape: 'rounded',
+${card({
+	children: [
+		pressList(symposia1),
+		cardActions({
+			children: [
+				button({
+					children: 'Go to Publication' + icon({ name: 'ArrowRight' }),
+					href: 'https://onlinelibrary.wiley.com/toc/17474469/2016/41/4',
+					shape: 'rounded',
+				}),
+			],
 		}),
-	]),
-])}
+	],
+})}
 
 ## Dignity Takings and Dignity Restoration
 
 <img src="/src/images/south-africa/symposia/cklr.webp" alt="Chicago Kent Law Review" width="250" style="margin-bottom: 2rem" />
 
-${card([
-	pressList(symposia2),
-	cardActions([
-		button({
-			children: 'Go to Publication' + icon({ name: 'ArrowRight' }),
-			href: 'https://studentorgs.kentlaw.iit.edu/cklawreview/issues/past-issues/vol-92-issue-3/',
-			shape: 'rounded',
+${card({
+	children: [
+		pressList(symposia2),
+		cardActions({
+			children: [
+				button({
+					children: 'Go to Publication' + icon({ name: 'ArrowRight' }),
+					href: 'https://studentorgs.kentlaw.iit.edu/cklawreview/issues/past-issues/vol-92-issue-3/',
+					shape: 'rounded',
+				}),
+			],
 		}),
-	]),
-])}
+	],
+})}
 
 ## Special Focus: Dignity Takings and Dignity Restorations
 
 <img src="/src/images/south-africa/symposia/ahrlj.webp" alt="African Human Rights Law Journal" width="250" style="margin-bottom: 2rem" />
 
-${card([
-	pressList(symposia3),
-	cardActions([
-		button({
-			children: 'Go to Publication' + icon({ name: 'ArrowRight' }),
-			href: 'https://www.ahrlj.up.ac.za/table-of-contents-volume-18-no-2-2018#:~:text=special%20focus%3A%20dignity%20takings%20and%20dignity%20restorations',
-			shape: 'rounded',
+${card({
+	children: [
+		pressList(symposia3),
+		cardActions({
+			children: [
+				button({
+					children: 'Go to Publication' + icon({ name: 'ArrowRight' }),
+					href: 'https://www.ahrlj.up.ac.za/table-of-contents-volume-18-no-2-2018#:~:text=special%20focus%3A%20dignity%20takings%20and%20dignity%20restorations',
+					shape: 'rounded',
+				}),
+			],
 		}),
-	]),
-])}
+	],
+})}
 
 <style>
 	.card > ul {padding: 1rem;}

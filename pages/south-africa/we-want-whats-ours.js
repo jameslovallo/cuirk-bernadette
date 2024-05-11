@@ -21,24 +21,28 @@ ${
 
 ${grid({
 	children: [
-		card([
-			html`
-				<img
-					src="/src/images/south-africa/wwwo-cover.webp"
-					style="width: 100%"
-				/>
-				${linkList(bookstores)}
-			`,
-		]),
-		card([
-			html`
-				<img
-					src="/src/images/south-africa/wwwo-cover-es.webp"
-					style="width: 100%"
-				/>
-				${linkList([es])}
-			`,
-		]),
+		card({
+			children: [
+				html`
+					<img
+						src="/src/images/south-africa/wwwo-cover.webp"
+						style="width: 100%"
+					/>
+					${linkList(bookstores)}
+				`,
+			],
+		}),
+		card({
+			children: [
+				html`
+					<img
+						src="/src/images/south-africa/wwwo-cover-es.webp"
+						style="width: 100%"
+					/>
+					${linkList([es])}
+				`,
+			],
+		}),
 	],
 	size: '23ch',
 })}
