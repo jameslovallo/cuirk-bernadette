@@ -1,12 +1,18 @@
-import { html, scss } from 'cuirk'
-import links from '../data/social.js'
+import { html, loop, scss } from 'cuirk'
+import meta from '../data/meta.js'
+import nav from '../data/nav.js'
 
 const date = new Date().getFullYear()
 
 export const footer = () => html`
 	<footer>
-		<a href="${links.newsletter}">Subscribe to Our Newsletter</a>
-		<small>© ${date} The Villages of Detroit. All Rights Reserved.</small>
+		<div>
+			${loop(
+				nav.filter((l) => l.desktop === 'end'),
+				(link) => html`<a href="${link.href}">${link.title}</a>`
+			)}
+		</div>
+		<small>© ${date} ${meta.title}. All Rights Reserved.</small>
 	</footer>
 `
 
@@ -15,19 +21,26 @@ footer.style = scss`
 		background: var(--c-footer, black);
 		color: var(--c-footer-color, white);
 		display: grid;
-		gap: 1rem;
+		gap: 1.5rem;
 		justify-content: center;
 		padding: 2rem 1rem;
 		position: sticky;
 		text-align: center;
 		top: 100vh;
+		
+		> div {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			justify-content: center;
 
-		a {
-			color: inherit;
-		}
+			> a {
+				text-decoration: none;
 
-		p {
-			margin: 0;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 `

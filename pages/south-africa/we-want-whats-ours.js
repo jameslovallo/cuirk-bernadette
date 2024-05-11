@@ -1,6 +1,8 @@
-import { html, loop, md } from 'cuirk'
-import { button, grid, youtube } from '../../src/components/index.js'
+import { html, md } from 'cuirk'
+import { card, grid, linkList, youtube } from '../../src/components/index.js'
 import bookstores from '../../src/data/south-africa/bookstores.js'
+
+const es = bookstores.pop()
 
 export const meta = {
 	title: "We Want What's Ours",
@@ -17,28 +19,30 @@ ${
 
 ## Get Your Copy
 
-<div
-	style="align-items: center; display: flex; flex-flow: row wrap; gap: 1rem;"
->
-	<img src="/src/images/south-africa/wwwo-cover.webp" style="width: 200px" />
-	<ul
-		style="display: grid; list-style: none; margin: 0; padding: 0; text-align: left"
-	>
-		${loop(
-			bookstores,
-			({ href, children }) => html`
-				<li>
-					${button({
-						href,
-						children,
-						variant: 'ghost',
-						shape: 'rounded',
-					})}
-				</li>
-			`
-		)}
-	</ul>
-</div>
+${grid({
+	children: [
+		card([
+			html`
+				<img
+					src="/src/images/south-africa/wwwo-cover.webp"
+					style="width: 100%"
+				/>
+				${linkList(bookstores)}
+			`,
+		]),
+		card([
+			html`
+				<img
+					src="/src/images/south-africa/wwwo-cover-es.webp"
+					style="width: 100%"
+				/>
+				${linkList([es])}
+			`,
+		]),
+	],
+	size: '23ch',
+})}
+
 
 ${grid({
 	children: [
@@ -56,4 +60,15 @@ ${grid({
 		`,
 	],
 })}
+
+<style>
+	.card > img {
+		aspect-ratio: 3 / 4.5;
+		object-fit: cover;
+		object-position: center;
+	}
+	.card > .link-list {
+		padding: 1rem;
+	}
+</style>
 `

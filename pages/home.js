@@ -1,5 +1,6 @@
 import { loop, md } from 'cuirk'
 import {
+	button,
 	grid,
 	homeHeader,
 	imageCard,
@@ -28,6 +29,20 @@ Prof. Atuahene has worked as a consultant for the World Bank and the South Afric
 
 Prof. Atuahene won a National Science Foundation award for her current project about racialized property tax administration in Detroit, which has received several accolades, including the Law and Society Association’s John Hope Franklin Award for best paper on race in 2020. In addition to publishing two New York Times op-eds and appearing on national news shows such as Democracy Now! and the Tavis Smiley Show to discuss her Detroit work, she has also published academic articles in journals such as California Law Review, Northwestern Law Review, and Southern California Law Review.
 
+## We Want What's Ours
+
+<div style="align-items: center; display: flex; flex-flow: row wrap; gap: 1.5rem;">
+	<img src="/src/images/south-africa/wwwo-cover.webp" width="150">
+	<div style="flex-basis: 60%; flex-grow: 1">
+		<p style="margin-top: 0">We Want What’s Ours is a detailed study of the South African Land Claims Commission’s attempts to compensate millions of South Africans displaced by the colonial and apartheid regimes.</p>
+		${button({
+			href: '/south-africa/we-want-whats-ours',
+			children: 'Learn More',
+			shape: 'rounded',
+		})}
+	</div>
+</div>
+
 ## The Work
 
 Bernadette Atuahene is a property law scholar whose work focuses on land stolen from people in the African Diaspora. Her last two projects dealt with land taken by state entities in South Africa and Detroit.
@@ -43,5 +58,19 @@ ${grid({
 
 ## Video Gallery
 
-${grid({ children: [loop(videoGallery, youtube)] })}
+<snappy-carousel>
+	${loop(videoGallery, youtube)}
+</snappy-carousel>
+
+<script type="module">
+	import "//unpkg.com/@snappywc/carousel";
+</script>
+
+<style>
+	snappy-carousel::part(indicators),
+	snappy-carousel::part(prev),
+	snappy-carousel::part(next) {
+		color: var(--c-primary);
+	}
+</style>
 `
