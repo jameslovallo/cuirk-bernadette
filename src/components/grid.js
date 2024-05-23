@@ -1,8 +1,10 @@
-import { css, html } from 'cuirk'
+import { css, html, renderChildren } from 'cuirk'
 
 export const grid = ({ children, size = '30ch' }) =>
 	html`
-		<div class="grid" style="--grid-size: ${size}">${children.join('')}</div>
+		<div class="grid" style="--grid-size: ${size}">
+			${renderChildren(children)}
+		</div>
 	`
 
 grid.style = css`

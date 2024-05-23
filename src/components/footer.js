@@ -18,8 +18,8 @@ export const footer = () => html`
 
 footer.style = scss`
 	footer {
-		background: var(--c-footer, black);
-		color: var(--c-footer-color, white);
+		background: var(--footer, black);
+		color: var(--footer-color, white);
 		display: grid;
 		gap: 1.5rem;
 		justify-content: center;

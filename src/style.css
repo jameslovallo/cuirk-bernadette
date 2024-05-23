@@ -1,5 +1,11 @@
 :root {
+	background: #f3f5f9;
 	font-family: sans-serif;
+	--c-primary: #0079ee;
+	--c-secondary: #363b67;
+	--footer: var(--c-secondary);
+	--nav: transparent;
+	--nav-color: black;
 }
 
 :root,
@@ -8,13 +14,25 @@ body {
 }
 
 body {
-	--c-primary: #0079ee;
 	margin: 0;
+}
+
+.surface {
+	border-radius: 0.5rem;
+	border: none;
+	box-shadow: 0px 2px 4px rgba(155, 155, 155, 0.5);
+	overflow: hidden;
+	position: relative;
+}
+
+nav > div > a {
+	border-radius: 0.5rem;
+	padding: 0.5rem;
 }
 
 main {
 	margin: 0 auto 3rem;
-	max-width: 70ch;
+	max-width: 80ch;
 	padding: 1rem;
 }
 

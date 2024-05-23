@@ -29,11 +29,10 @@ Prof. Atuahene has worked as a consultant for the World Bank and the South Afric
 
 Prof. Atuahene won a National Science Foundation award for her current project about racialized property tax administration in Detroit, which has received several accolades, including the Law and Society Association’s John Hope Franklin Award for best paper on race in 2020. In addition to publishing two New York Times op-eds and appearing on national news shows such as Democracy Now! and the Tavis Smiley Show to discuss her Detroit work, she has also published academic articles in journals such as California Law Review, Northwestern Law Review, and Southern California Law Review.
 
-## We Want What's Ours
-
-<div style="align-items: center; display: flex; flex-flow: row wrap; gap: 1.5rem;">
-	<img src="/src/images/south-africa/wwwo-cover.webp" width="150">
-	<div style="flex-basis: 60%; flex-grow: 1">
+<div class="book-banner">
+	<img src="/src/images/south-africa/wwwo-cover.webp" width="200">
+	<div>
+		<h2>We Want What’s Ours</h2>
 		<p style="margin-top: 0">We Want What’s Ours is a detailed study of the South African Land Claims Commission’s attempts to compensate millions of South Africans displaced by the colonial and apartheid regimes.</p>
 		${button({
 			href: '/south-africa/we-want-whats-ours',
@@ -58,19 +57,76 @@ ${grid({
 
 ## Video Gallery
 
-<snappy-carousel>
+<snappy-carousel class="surface">
 	${loop(videoGallery, youtube)}
 </snappy-carousel>
 
-<script type="module">
-	import "//unpkg.com/@snappywc/carousel";
-</script>
-
 <style>
+	.book-banner {
+		background: var(--c-secondary);
+		color: white;
+		display: grid;
+		gap: 2rem;
+		margin: 3rem -1rem;
+		padding: 3rem;
+		text-align: center;
+	}
+
+	.book-banner img {
+		margin: auto;
+	}
+
+	.book-banner h2 {
+		margin-top: 0;
+	}
+
+	@media (min-width: 720px) {
+		.book-banner {
+			align-items: center;
+			grid-template-columns: 200px 1fr;
+			margin: 3rem 0;
+			padding: 0;
+			text-align: left;
+		}
+
+		.book-banner img {
+			margin: -1rem;
+			max-width: unset;
+			width: calc(200px + 1.5rem);
+		}
+
+		.book-banner > div {
+			padding-right: 1rem;
+		}
+	}
+
+	snappy-carousel {
+		--desktop: 50%;
+	}
+	
+	@media (min-width: 720px) {
+		snappy-carousel {
+			--gap: .5rem;
+			padding: .5rem 1rem 0;
+		}
+
+		snappy-carousel::part(track) {
+			margin: 0 -1rem;
+		}
+
+		snappy-carousel > .youtube > button {
+			border-radius: .25rem;
+		}
+	}
+
 	snappy-carousel::part(indicators),
 	snappy-carousel::part(prev),
 	snappy-carousel::part(next) {
 		color: var(--c-primary);
 	}
 </style>
+
+<script type="module" defer>
+	import "//unpkg.com/@snappywc/carousel";
+</script>
 `

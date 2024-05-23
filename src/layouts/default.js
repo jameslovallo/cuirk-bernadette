@@ -9,10 +9,10 @@ export default ({ meta, children }) => {
 		<!DOCTYPE html>
 		<html lang="en">
 			<head>
-				<!-- page meta -->
-				${pageMeta(meta)}
 				<!-- component styles -->
 				${componentStyles(components)}
+				<!-- page meta -->
+				${pageMeta(meta)}
 			</head>
 			<body>
 				${nav({ links: navLinks })}

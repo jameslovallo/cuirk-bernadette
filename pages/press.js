@@ -13,13 +13,25 @@ export const body = md`
 
 ## Selected Highlights
 
-${pressList(highlights)}
+<div class="surface">
+	${pressList(highlights)}
+</div>
 
 ## Detroit
 
-${pressList(detroit)}
+<div class="surface">
+	${pressList(detroit)}
+</div>
 
 ## South Africa
 
-${pressList(southAfrica)}
+<div class="surface">
+	${pressList(southAfrica)}
+</div>
+
+<style>
+	.surface {
+		padding: 1rem;
+	}
+</style>
 `
