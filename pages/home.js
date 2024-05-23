@@ -57,7 +57,7 @@ ${grid({
 
 ## Video Gallery
 
-<snappy-carousel class="surface">
+<snappy-carousel>
 	${loop(videoGallery, youtube)}
 </snappy-carousel>
 
@@ -102,21 +102,11 @@ ${grid({
 
 	snappy-carousel {
 		--desktop: 50%;
+		--gap: .5rem;
 	}
-	
-	@media (min-width: 720px) {
-		snappy-carousel {
-			--gap: .5rem;
-			padding: .5rem 1rem 0;
-		}
 
-		snappy-carousel::part(track) {
-			margin: 0 -1rem;
-		}
-
-		snappy-carousel > .youtube > button {
-			border-radius: .25rem;
-		}
+	snappy-carousel .youtube button {
+		border-radius: .5rem;
 	}
 
 	snappy-carousel::part(indicators),
