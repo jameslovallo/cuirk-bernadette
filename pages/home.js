@@ -21,6 +21,8 @@ const videoGallery = [
 export const body = md`
 ${homeHeader({ meta })}
 
+${youtube({ id: 'j1PxT_uUxG8' })}
+
 ## About Professor Atuahene
 
 Bernadette Atuahene is a property law scholar focusing on land stolen from people in the African Diaspora. She is the daughter of Ghanaian immigrants who grew up in Los Angeles and attended UCLA for college. She then earned her JD from Yale and her MPA from Harvard. After completing her graduate studies, she served as a judicial clerk at the Constitutional Court of South Africa and then practiced as an associate at Cleary, Gottlieb, Steen & Hamilton in New York. She is now a Professor at the USC Gould School of Law.
@@ -62,6 +64,23 @@ ${grid({
 </snappy-carousel>
 
 <style>
+	main > .youtube {
+		margin: 3rem 1rem 3rem 0;
+		position: relative;
+	}
+
+	main > .youtube:before {
+		content: '';
+		display: block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		background: goldenrod;
+		z-index: -1;
+	}
+
 	.book-banner {
 		background: var(--c-secondary);
 		color: white;
