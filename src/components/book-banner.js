@@ -30,7 +30,7 @@ bookBanner.style = scss`
 		--c-primary-2: #fce60522;
 		--c-primary-3: #fce60533;
 		--c-primary-color: black;
-		background: linear-gradient(to bottom, #3e3b39, #1e1b19);
+		background: linear-gradient(to right, #3e3b39, #1e1b19);
 		color: #fff;
 
 		> .container {
