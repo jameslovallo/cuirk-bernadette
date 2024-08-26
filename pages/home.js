@@ -66,14 +66,14 @@ ${grid({
 	}
 
 	main > .youtube:before {
+		background: var(--c-secondary);
 		content: '';
 		display: block;
 		height: 100%;
-		width: 100%;
+		left: 1rem;
 		position: absolute;
 		top: 1rem;
-		left: 1rem;
-		background: var(--c-secondary);
+		width: 100%;
 		z-index: -1;
 	}
 
