@@ -1,8 +1,8 @@
-import { componentScripts, componentStyles, html } from 'cuirk'
+import { componentScripts, componentStyles, html, when } from 'cuirk'
 import * as components from '../components/index.js'
 import navLinks from '../data/nav.js'
 
-const { footer, pageMeta, nav } = components
+const { bookBanner, footer, pageMeta, nav } = components
 
 export default ({ meta, children }) => {
 	return html`
@@ -16,6 +16,8 @@ export default ({ meta, children }) => {
 			</head>
 			<body>
 				${nav({ links: navLinks })}
+				<!-- home page banner -->
+				${when(!meta?.title, bookBanner())}
 				<main>${children}</main>
 				${footer({ links: navLinks })}
 				<!-- component scripts -->
