@@ -2,7 +2,7 @@ export default {
 	title: 'Plundered',
 	subtitle: 'How Racist Policies Undermine Black Homeownership in America',
 	description:
-		'For fans of Evicted, a look behind the curtains of once-bustling Black neighborhoods dogged by foreclosure, poverty, and policing—and a searing indictment of the racist policies behind them.',
+		'Just as Evicted uses Milwaukee to discuss America’s eviction crisis, Professor Bernadette Atuahene uses Detroit to reveal another under reported national phenomenon: predatory governance, where public officials raise public dollars through racist policies.',
 	cover: '/src/images/plundered/cover.min.jpg',
 	print: '/src/images/plundered/print.min.png',
 	links: [

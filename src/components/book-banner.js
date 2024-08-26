@@ -1,6 +1,5 @@
 import { html, scss } from 'cuirk'
 import plundered from '../data/plundered.js'
-import amazonIcon from '../icons/amazon.js'
 import { button } from './index.js'
 
 const { title, subtitle, description, cover } = plundered
@@ -13,12 +12,7 @@ export const bookBanner = () => html`
 				<p>${description}</p>
 				<div class="links">
 					${button({
-						children: amazonIcon + 'Buy Now',
-						href: 'https://www.amazon.com/gp/product/0316572217',
-						shape: 'rounded',
-					})}
-					${button({
-						children: 'Learn More',
+						children: 'Learn More and Pre-Order Now',
 						href: '/plundered',
 						shape: 'rounded',
 						variant: 'subtle',
@@ -36,7 +30,7 @@ bookBanner.style = scss`
 		--c-primary-2: #fce60522;
 		--c-primary-3: #fce60533;
 		--c-primary-color: black;
-		background: linear-gradient(to right, #3e3b39, #1e1b19);
+		background: linear-gradient(to bottom, #3e3b39, #1e1b19);
 		color: #fff;
 
 		> .container {
@@ -45,7 +39,7 @@ bookBanner.style = scss`
 			gap: 1rem;
 			margin: 0 auto;
 			max-width: 100ch;
-			padding: 2rem 1rem;
+			padding: 3rem 1rem;
 
 			@media (min-width: 768px) {
 				gap: 2rem;
