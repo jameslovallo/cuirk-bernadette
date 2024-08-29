@@ -8,7 +8,7 @@ export const footer = () => html`
 	<footer>
 		<div>
 			${loop(
-				nav.filter((l) => l.desktop === 'end'),
+				nav.filter((l) => l.desktop !== 'center'),
 				({ href, title }) => html`<a href="${href}">${title}</a>`
 			)}
 		</div>
