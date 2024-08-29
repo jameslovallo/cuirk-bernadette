@@ -15,10 +15,13 @@ export const body = md`
 	<div class="content">
 		<h1>${title}</h1>
 		<p>${subtitle}</p>
+		<p>January 28, 2025</p>
 		<p>Pre-order now at these locations:</p>
 		<div class="links">
-			${loop(links, ({ title, href }) =>
-				button({ children: title, href, shape: 'pill', variant: 'subtle' })
+			${loop(
+				links.sort((a, b) => a.title.localeCompare(b.title)),
+				({ title, href }) =>
+					button({ children: title, href, shape: 'pill', variant: 'subtle' })
 			)}
 		</div>
 	</div>
