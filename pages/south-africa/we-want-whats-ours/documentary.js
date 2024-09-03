@@ -42,7 +42,7 @@ ${button({
 	shape: 'rounded',
 })}
 
-## An Aerial View of the Ndolila’S Ancestral Land
+## An Aerial View of the Ndolila’s Ancestral Land
 
 <iframe class="Map_embed" frameborder="0" style="display: block; width: 100%; aspect-ratio: 4/3;" src="https://maps.google.com/maps?q=Totalsports%20Evaton%20plaza&amp;t=k&amp;z=18&amp;ie=UTF8&amp;output=embed"></iframe>
 `
