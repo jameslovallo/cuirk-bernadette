@@ -26,6 +26,10 @@ body {
 }
 
 nav {
+	--c-primary: #000;
+	--c-primary-1: #0001;
+	--c-primary-2: #0002;
+	--c-primary-3: #0003;
 	grid-template-columns: 1fr auto 1fr;
 }
 
