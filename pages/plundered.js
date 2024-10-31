@@ -16,7 +16,7 @@ export const body = md`
 		<h1>${title}</h1>
 		<p>${subtitle}</p>
 		<p>January 28, 2025</p>
-		<p>Pre-order now at these locations:</p>
+		<h2>Pre-order now at these locations</h2>
 		<div class="links">
 			${loop(
         links.sort((a, b) => a.title.localeCompare(b.title)),
@@ -103,6 +103,11 @@ In this powerful work of scholarship and storytelling, Atuahene shows how predat
 		font-size: 2.5rem;
 		line-height: 1;
 		text-transform: uppercase;
+	}
+
+	.book-header h2 {
+		font-size: 1.5rem;
+		margin-bottom: 0;
 	}
 
 	.book-header p:first-of-type {
