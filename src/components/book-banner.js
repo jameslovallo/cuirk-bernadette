@@ -1,8 +1,9 @@
-import { html, scss } from 'cuirk'
-import plundered from '../data/plundered.js'
-import { button } from './index.js'
+import { html, scss } from "cuirk";
+import plundered from "../data/plundered.js";
+import { button, icon } from "./index.js";
+import amazon from "../icons/amazon.js";
 
-const { title, subtitle, description, cover } = plundered
+const { title, subtitle, description, cover } = plundered;
 
 export const bookBanner = () => html`
 	<div class="book-banner">
@@ -12,16 +13,21 @@ export const bookBanner = () => html`
 				<p>${description}</p>
 				<div class="links">
 					${button({
-						children: 'Learn More and Pre-Order Now',
-						href: '/plundered',
-						shape: 'rounded',
-						variant: 'subtle',
+						children: amazon + "Buy on Amazon",
+						href: plundered.links[0].href,
+						shape: "rounded",
+					})}
+					${button({
+						children: "Learn More",
+						href: "/plundered",
+						shape: "rounded",
+						variant: "subtle",
 					})}
 				</div>
 			</div>
 		</div>
 	</div>
-`
+`;
 
 bookBanner.style = scss`
 	.book-banner {
@@ -80,4 +86,4 @@ bookBanner.style = scss`
 			}
 		}
 	}
-`
+`;
