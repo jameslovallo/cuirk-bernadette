@@ -1,10 +1,10 @@
-import { md } from 'cuirk'
-import { button, grid, youtube } from '../src/components/index.js'
+import { md } from "cuirk";
+import { button, grid, youtube } from "../src/components/index.js";
 
 export const meta = {
-	title: 'Illegally Inflated Property Taxes in Detroit',
-	description: 'Bernadette create the Coalition for Property Tax Justice',
-}
+	title: "Illegally Inflated Property Taxes in Detroit",
+	description: "Bernadette create the Coalition for Property Tax Justice",
+};
 
 export const body = md`
 # ${meta.title}
@@ -14,7 +14,7 @@ Between 2009 and 2015, the Detroit Assessment Division was assessing between 55 
 ## Watch Our Videos
 
 ${grid({
-	children: [youtube({ id: 'bD3vZYDYZsM' }), youtube({ id: 'Zpfvs-VAMJc' })],
+	children: [youtube({ id: "bD3vZYDYZsM" }), youtube({ id: "Zpfvs-VAMJc" })],
 })}
 
 ## Learn More and Get Involved
@@ -28,14 +28,14 @@ Founded in 2017, the [Coalition for Property Tax Justice](https://illegalforeclo
 Since the Coalition’s inception, we’ve accomplished an impressive amount. From starting an unprecedented Dignity Restoration Housing Program to shaping the settlement of a groundbreaking lawsuit and solidifying the wins in a City ordinance, Coalition member organizations haven’t stopped fighting for the rights of Detroit’s working families.
 
 ${button({
-	children: 'Learn More',
-	href: 'https://illegalforeclosures.org',
-	shape: 'rounded',
+	children: "Learn More",
+	href: "https://illegalforeclosures.org",
+	shape: "rounded",
 })}
 ${button({
-	children: 'Donate',
-	href: 'https://actionnetwork.org/fundraising/coalition-for-property-tax-justice',
-	variant: 'ghost',
-	shape: 'rounded',
+	children: "Donate",
+	href: "https://actionnetwork.org/fundraising/coalition-for-property-tax-justice",
+	variant: "ghost",
+	shape: "rounded",
 })}
-`
+`;
