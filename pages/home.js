@@ -1,22 +1,22 @@
-import { html, loop, md } from 'cuirk'
+import { html, loop, md } from "cuirk";
 import {
 	aboutHeader,
 	button,
 	grid,
 	imageCard,
 	youtube,
-} from '../src/components/index.js'
-import meta from '../src/data/meta.js'
-import nav from '../src/data/nav.js'
+} from "../src/components/index.js";
+import meta from "../src/data/meta.js";
+import nav from "../src/data/nav.js";
 
 const videoGallery = [
-	{ id: 'QOaBmU_3PdI' },
-	{ id: 'FF69IlomFVQ' },
-	{ id: 'RYamNC4gTrQ' },
-	{ id: 'tuIjsQFX_-o' },
-	{ id: 'HgelDL8rNDU' },
-	{ id: 'EgngNbF4k-E' },
-]
+	{ id: "QOaBmU_3PdI" },
+	{ id: "FF69IlomFVQ" },
+	{ id: "RYamNC4gTrQ" },
+	{ id: "tuIjsQFX_-o" },
+	{ id: "HgelDL8rNDU" },
+	{ id: "EgngNbF4k-E" },
+];
 
 export const body = md`
 ${aboutHeader({
@@ -27,20 +27,20 @@ ${aboutHeader({
 			on land stolen from people in the African Diaspora.
 		</p>
 		${button({
-			children: 'Read More',
-			href: '/about',
-			shape: 'rounded',
+			children: "Read More",
+			href: "/about",
+			shape: "rounded",
 		})}
 	`,
 })}
-${youtube({ id: 'j1PxT_uUxG8' })}
+${youtube({ id: "j1PxT_uUxG8" })}
 
 ## The Work
 
 Bernadette Atuahene is a property law scholar whose work focuses on land stolen from people in the African Diaspora. Her last two projects dealt with land taken by state entities in South Africa and Detroit.
 
 ${grid({
-	size: '33ch',
+	size: "33ch",
 	children: [
 		loop(
 			nav.filter((link) => link.img),
@@ -96,4 +96,4 @@ ${grid({
 <script type="module" defer>
 	import "//unpkg.com/@snappywc/carousel";
 </script>
-`
+`;

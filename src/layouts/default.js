@@ -20,10 +20,7 @@ export default ({ meta, children }) => {
 				${when(!meta?.title, bookBanner())}
 				<div class="layout">
 					<main>${children}</main>
-					<aside>
-						<h2>Events</h2>
-						${events()}
-					</aside>
+					<aside>${events()}</aside>
 				</div>
 				${footer({ links: navLinks })}
 				<!-- component scripts -->

@@ -45,22 +45,21 @@ nav > div:nth-child(2) > a {
 	letter-spacing: 1px;
 }
 
-body > .layout {
-	margin: 0 auto 3rem;
-	max-width: 1024px;
+.layout {
+	display: grid;
+	gap: 1rem;
+}
+
+main,
+#events {
+	max-width: 80ch;
+	margin: 0 auto;
 	padding: 1rem;
 }
 
-@media (min-width: 1200px) {
-	body > .layout {
-		display: grid;
-		gap: 3rem;
-		grid-template-columns: 1fr auto;
-	}
-
-	body > .layout > aside {
-		padding-top: 1rem;
-	}
+aside {
+	background: #eee;
+	padding-bottom: 4rem;
 }
 
 h1,
