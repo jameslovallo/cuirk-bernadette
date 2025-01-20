@@ -3,7 +3,7 @@ export default {
 	description:
 		"Professor of law, author, documentary filmmaker, and community organizer.",
 	url: "https://bernadetteatuahene.com",
-	image: "/src/images/global/meta.jpeg",
+	image: "/src/images/social.jpg",
 	links: [
 		{
 			rel: "icon",

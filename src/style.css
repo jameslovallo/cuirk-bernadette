@@ -45,11 +45,6 @@ nav > div:nth-child(2) > a {
 	letter-spacing: 1px;
 }
 
-.layout {
-	display: grid;
-	gap: 1rem;
-}
-
 main,
 #events {
 	max-width: 80ch;
