@@ -35,7 +35,7 @@ export default [
 	},
 	{
 		title: 'Publications',
-		href: 'https://works.bepress.com/bernadette_atuahene/',
+		href: 'https://scholar.google.com/citations?user=ogpOKHcAAAAJ',
 		desktop: 'end',
 		mobile: 'end',
 		img: '/src/images/home/publications.webp',
