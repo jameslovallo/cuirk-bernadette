@@ -2,7 +2,7 @@ import { componentScripts, componentStyles, html, when } from "cuirk";
 import * as components from "../components/index.js";
 import navLinks from "../data/nav.js";
 
-const { bookBanner, events, footer, pageMeta, nav } = components;
+const { bookBanner, footer, pageMeta, nav } = components;
 
 export default ({ meta, children }) => {
 	return html`
@@ -20,7 +20,6 @@ export default ({ meta, children }) => {
 				${when(!meta?.title, bookBanner())}
 				<div class="layout">
 					<main>${children}</main>
-					<aside>${events()}</aside>
 				</div>
 				${footer({ links: navLinks })}
 				<!-- component scripts -->
