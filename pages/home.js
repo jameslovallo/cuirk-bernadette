@@ -64,7 +64,6 @@ ${grid({
 	}
 
 	main > .youtube {
-		margin: 4rem 1rem 4rem 0;
 		position: relative;
 	}
 
