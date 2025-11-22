@@ -37,6 +37,7 @@ ${aboutHeader({
 
 ## Pundered Q&A with Dr. Ibram X. Kendi
 ${youtube({ id: "8qP9VI6WyJU" })}
+<br>
 
 ## The Work
 
