@@ -10,6 +10,7 @@ import meta from "../src/data/meta.js";
 import nav from "../src/data/nav.js";
 
 const videoGallery = [
+	{ id: "j1PxT_uUxG8" },
 	{ id: "QOaBmU_3PdI" },
 	{ id: "FF69IlomFVQ" },
 	{ id: "RYamNC4gTrQ" },
@@ -33,7 +34,9 @@ ${aboutHeader({
 		})}
 	`,
 })}
-${youtube({ id: "j1PxT_uUxG8" })}
+
+## Pundered Q&A with Dr. Ibram X. Kendi
+${youtube({ id: "8qP9VI6WyJU" })}
 
 ## The Work
 
